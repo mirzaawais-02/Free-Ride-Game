@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Free Ride — Endless Drive</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="hud">
+  <div class="top"><div class="brand">FREE RIDE</div><div class="stage" id="stage">DAY</div></div>
+  <div class="stats"><span>Distance <b id="distance">0 m</b></span><span>Best <b id="best">0 m</b></span><span>Speed <b id="speed">0 km/h</b></span><span>Coins <b id="coins">0</b> 🪙</span></div>
+  <div class="bars"><div class="life" id="lives">❤️ ❤️ ❤️</div><div class="difficulty">DIFFICULTY <b id="difficulty">1</b></div><div class="nitro"><span>NITRO</span><div><i id="nitroBar"></i></div></div></div>
+</div>
+<div id="message"></div>
+
+<div id="startScreen" class="screen">
+  <div class="card">
+    <div class="emoji">🏎️</div><h1>FREE RIDE</h1>
+    <p>Drive forever. Buy faster cars. Survive the traffic.</p>
+    <button id="startBtn">START DRIVE</button>
+    <button id="garageBtn" class="secondary">GARAGE 🚗</button>
+    <small>PC: Arrow keys / A D • SPACE / N = Nitro</small>
+  </div>
+</div>
+
+<div id="garage" class="screen hidden">
+  <div class="garageCard">
+    <div class="garageHead"><div><h1>GARAGE</h1><p>Coins: <b id="garageCoins">0</b> 🪙</p></div><button id="closeGarage" class="close">✕</button></div>
+    <div id="carGrid" class="carGrid"></div>
+  </div>
+</div>
+
+<div id="gameOver" class="screen hidden"><div class="card"><div class="emoji">💥</div><h1>CRASH!</h1><p id="finalText">You drove 0 m.</p><button id="restartBtn">DRIVE AGAIN</button><button id="garageAfter" class="secondary">GARAGE 🚗</button></div></div>
+
+<div id="controls"><button id="leftBtn">◀</button><button id="nitroBtn">⚡</button><button id="rightBtn">▶</button></div>
+<script src="game.js"></script>
+</body>
+</html>
